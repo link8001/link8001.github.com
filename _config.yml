@@ -1,34 +1,73 @@
-name: White Paper
-markdown: redcarpet
-highlighter: true
-url: http://vinitkumar.me/white-paper
-gems: [jekyll-paginate,  jekyll-gist]
-paginate: 8
-description:     Jekyll theme for Programmers
-intro: White Paper is a Jekyll theme most suited to be used on tech blogs that like their content to shine.
-logo:             logo.png
-disqus_shortname:
-# url: http://gotchacode.com
-#Comment out url when working locally to resolve base urls correctly
-#url:
+# Hexo Configuration
+## Docs: http://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
 
-# Owner/author information
-owner:
-  name:           <your-name-here>
-  avatar:         <avatar-image-link>
-  email:          <your-email-address>
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:
-  github:
-  stackexchange:
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:
+# Site
+title: 折腾手记
+subtitle: 运维！！运维！！
+description:
+author: lyallchan
+language: zh-CN
+timezone: 
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:
-google_verify:
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://lyallchan.github.io
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
 
-# Links to include in top navigation
-# For external links add external: true
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+## Plugins: http://hexo.io/plugins/
+## Themes: http://hexo.io/themes/
+#theme: landscape
+theme: maupassant
+
+# Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: git@github.com:lyallchan/lyallchan.github.io.git
