@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: linux
+categories: ubuntu
 ---
 
 Windows下的下载工具--迅雷，之所以下载速度快，乃是它能搜索资源、为己所用，而不是仅仅从原始地址这单一资源处下载。
