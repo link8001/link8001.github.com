@@ -3,6 +3,7 @@ layout: post
 comments: true
 categories: QT
 ---
+[英文原文](http://doc.qt.io/qt-4.8/stylesheet-examples.html)
 
 在涉及到Qt 美工的时候首先需要掌握CSS 级联样式表。
 下面将通过几个例子来介绍一下怎样使用Qt中的部件类型设计。自定义的前台背景与后台背景的颜色：
