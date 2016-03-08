@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects
+title: 个人简介
 comments: true
 permalink: /projects/
 ---
