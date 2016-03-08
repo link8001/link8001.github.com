@@ -18,7 +18,7 @@ layout: default
 	  全部文章
 	  </div>
       <div class="post-list-body">
-        <div class="all-posts" post-cate="All">
+        <div class="all-posts" post-cate="全部">
           {% for post in site.posts %}
             <a class="post-list-item" href="{{ post.url | prepend: site.baseurl }}">
               <h2>
@@ -55,7 +55,7 @@ layout: default
         分类
       </div>
       
-      <a href="javascript:;" class="categories-list-item" cate="全部文章">
+      <a href="javascript:;" class="categories-list-item" cate="全部">
         All<span class="my-badge"> {{site.posts | size}}</span>
       </a>
       {% for category in site.categories %}
