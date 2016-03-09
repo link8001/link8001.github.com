@@ -16,19 +16,19 @@ uget和aria2都可以在“软件中心”中安装，但是版本太老啦，�
 
 #### 1.uget的安装：
 
-*sudo add-apt-repository ppa:plushuang-tw/uget-stable*
+    sudo add-apt-repository ppa:plushuang-tw/uget-stable
 
-*sudo apt-get update*
+    sudo apt-get update
 
-*sudo apt-get install uget*
+    sudo apt-get install uget
 
 #### 2.aria2的安装：
 
-*sudo add-apt-repository ppa:t-tujikawa/ppa*
+    sudo add-apt-repository ppa:t-tujikawa/ppa
 
-*sudo apt-get update*
+    sudo apt-get update
 
-*sudo apt-get install aria2*
+    sudo apt-get install aria2
 
 安装完aria2后，可以在终端中运行aria2c -v，查看版本和支持的特性。需要1.10以上的版本才能支持资源搜索。
 
@@ -40,7 +40,7 @@ uGet1.8.2(stable)
 
 #### 2.启用aria2插件
 
-*--enable-rpc=true*
+    --enable-rpc=true
 
 #### 3.设置下载任务的属性(同时下载几个任务、多少个服务器、保存位置等)
 
