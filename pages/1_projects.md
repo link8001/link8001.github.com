@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 个人简介
+title: 我的项目
 comments: true
 permalink: /projects/
 ---
@@ -8,67 +8,25 @@ permalink: /projects/
 * content
 {:toc}
 
-# All my projects
-Following are projects started by me. 
+# 我的项目
+下面是我参与的项目
 
-## NPL project
-* Started: 2004-present
-* Website: [www.nplproject.com](http://www.nplproject.com)
-   * NPL Code Wiki
-   * NPL language service and debugger
+## 瞬断检测仪
 
-NPL(Neural Parallel Language) is a new programming language. It was started as my exploration of coding logics in a networked environment.    
-Throughout the years, I have written over a million lines of code with it. All my other projects since 2005 is written in it. 
- 
+> 起止日期:2012.11~2013.01
 
-## Paracraft
-* Started: 2012-present
-* Website: [www.paracraft.cn](http://www.paracraft.cn)
-   * [ParacraftSDK](https://github.com/LiXizhi/ParaCraftSDK)
-   * Self Learning College
+> 项目简介  
+> 瞬断检测仪
 
-Paracraft is a standalone 3d animation software for everyone. 
-It was my exploration of CAD(computer aided design) using the vision brain (i.e. your right brain).
-Paracraft is an extensible tool that everyone can learn to create videos and computer programs.
-I am using it to promote NPL language in self learning college to teach students programming.  
-
-
-## ParaEngine
-* Started: 2005-present
-* Website: [www.paraengine.com](http://www.paraengine.com)
-   * ParaEngine Developer Site (PEDN)
-   * MCML: a markup language to create GUI
-    
-ParaEngine is a 3d distributed game engine I wrote with C++/NPL. It has become the low-level code framework for all my other projects since 2005. 
-
-## Magic Haqi
-* Started: 2009-2014 (still operating)
-* Website: [haqi.61.com](http://haqi.61.com)
-   * user forum
-   * user videos
-
-Magic Haqi is a free/paid 3D MMORPG published by taomee in November, 2009, allowing kids to play, create and share 3d worlds. It has over 5 million registered users and tens of thousands of user created works in China. The software is developed and owned by the developers of Paracraft, but has nothing to do with Paracraft. The initial version of paracraft was developed as a module in Magic Haqi. We have valid contract with its publisher taomee for their use of paracraft and its source code. 
-
-
-## Magic Haqi2
-* Started: 2012-2013 (still operating)
-* Website: [haqi2.61.com](http://www.61.com/haqi2/home.html)
-
-Same as Magic haqi. 
-
-## ParaWorld
-* Started: 2007-2008
-* Website: closed
-
-It used to be hosted on www.pala5.cn. It is a community based world creation game. We did not manage to make it to the public, and closed the project. 
-
-## Kids Movie Creator
-* Started: 2006-2007
-* Website: [download link](http://kids-movie-creator.software.informer.com/)
-
-Kids Movie Creator is a very old shareware released in 2006, allowing kids to create 3d world and make movies. 
-
-## Before 2005
-* Started: 1989-2005 (very old ones)
-* [Xizhi's old website before 2005](/oldsite2005/projects.htm). 
-
+> 相关荣誉
+> [实用新型] 动态瞬断检测仪
+> 授权公告号：CN204495940U
+> 授权公告日：2015.07.22
+> 申请号：2015202247390
+> 申请日：2015.04.15
+> 专利权人：青岛海能电气有限公司;
+> 发明人：赵楠林; 安刚虎
+>
+> 地址：266100山东省青岛市李沧区九水东路320—8号
+> 分类号：G01R31/00(2006.01)I  
+> 摘要： 动态瞬断检测仪，包括：被测连接器，瞬断检测电路、瞬断触发电路、嵌入式处理器、液晶显示屏、清零键和翻页键，其特征在于，瞬断检测电路与被测连接器连接，瞬断触发电路分别与瞬断检测电路、嵌入式处理器连接，嵌入式处理器分别与瞬断检测电路、液晶显示屏、清零键和翻页键连接，该动态瞬断检测仪针对单片机响应时间所限，难以实现多路瞬断故障信号有效捕捉的问题，采用高精度的STC12C5A60S2嵌入式处理器，通过增加一瞬断触发电路可实现瞬断信号的有效捕捉、处理，保证了检测结果的精确性和可靠性。  
