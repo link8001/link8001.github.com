@@ -1,4 +1,8 @@
-
+---
+layout: post
+comments: true
+categories: QT
+---
 
 转自[博客园](http://www.cnblogs.com/xiaomanon/p/3792789.html?utm_source=tuicool&utm_medium=referral)
 
