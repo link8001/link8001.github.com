@@ -38,10 +38,10 @@ QHostInfo类利用操作系统所提供的查询机制来查询与特定主机�
         if (!addrList.isEmpty())
         {
            for  (int i = 0; i < addrList.size(); i++)
-        {
-           qDebug() << addrList.at(i);
-        }
-      }
+           {
+             qDebug() << addrList.at(i);
+           }
+       }
     }
 
 如果你想要使用阻塞方式查询，则使用QHostInfo::fromName()函数。查询给定主机名对应的IP地址。此函数在查询期间将阻塞，这意味着程序执行期间将挂起直到返回查询结果。返回的查询结果存储在一个QHostInfo对象中。
