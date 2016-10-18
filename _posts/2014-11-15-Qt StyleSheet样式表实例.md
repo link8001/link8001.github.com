@@ -3,6 +3,8 @@ layout: post
 comments: true
 categories: QT编程
 ---
+转自[CSDN](http://blog.csdn.net/fu1201520/article/details/41147737)
+
 [英文原文](http://doc.qt.io/qt-4.8/stylesheet-examples.html)
 
 在涉及到Qt 美工的时候首先需要掌握CSS 级联样式表。
