@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: markdown
+categories: 编辑技巧
 ---
 
 ### Atom编辑器在Ubuntu下安装（32位推荐，64位有官方deb包）
