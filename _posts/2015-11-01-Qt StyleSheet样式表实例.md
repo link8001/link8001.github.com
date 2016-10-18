@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: QT
+categories: QT编程
 ---
 [英文原文](http://doc.qt.io/qt-4.8/stylesheet-examples.html)
 
@@ -10,34 +10,34 @@ categories: QT
 如果需要一个文本编辑器的背景变为黄色， 下面是代码行：
 
     qApp->setStyleSheet("QLineEdit { background-color: yellow }");
-    
+
 针对一个对话框的内容中使用QLineEdit以及QLineEdit的子类的背景都变成黄色， 下面是代码：
 
     myDialog ->setStyleSheet("QLineEdit { background-color: yellow }");
-    
+
 如果只需要制定一个QLineEdit的内容， 将使用QObject::setObjectName() 下面是一个实例：
 
     myDialog->setStyleSheet("QLineEdit#nameEdit { background-color: yellow }");
-    
+
 同时也可以针对每一个指定的部件做直接的类型设置， 下面是一个实例：
 
     ui.nameEdit->setStyleSheet("background-color: yellow");
-    
+
 为了做一个鲜明的对比， 将要为文本设置合适的颜色。
 
     nameEdit->setStyleSheet("color: blue; background-color: yellow");
-    
+
 当然最好的办法还有针对选择的文本来进行设置， 下面设置了一个选择文本的类型属性：
 
      nameEdit->setStyleSheet("color: blue;"
                              "background-color: yellow;"
                              "selection-color: yellow;"
                              "selection-background-color: blue;");
-                             
+
 在有一些情况下， 不需要用户参与， 而有软件设计人员来自己制定样式， 即使这些是有违审美角度。  下面就从应用程序开发角度来设计样式。
 
     *[mandatoryField="true"] { background-color: yellow }
-    
+
 上面的意思是一些强制的区域是需要用Qt 的属性管理来强制设置成为黄色的背景。
 这样一些强制的部件，将需要通过函数来设置当前的属性已经被强制设置， 下面是实现的代码：
 
@@ -49,12 +49,12 @@ categories: QT
     ageSpinBox->setProperty("mandatoryField", true);
     QPushButton * evilButton = new QPushButton (this);
     evilButton ->setText("Button");
-    
+
 下面我们将通过一个按钮的部件来设置属性样式：
 首先来设置一下样式：
 
     QPushButton#evilButton { background-color: red }
-    
+
 说明设置的当前的按钮为红色。作为一个flat 平滑的按钮时没有边界的。 下面是来改进一下对边界的设置。
 
     QPushButton#evilButton {
@@ -62,8 +62,8 @@ categories: QT
          border-style: outset;
          border-width: 2px;
          border-color: beige;
-     } 
-     
+     }
+
 在这里设置了一个边界的类型与边界的宽度。  这样看上去就好多了，文档中无法展现图片， 有兴趣可以去Qt 的变成环境当中去尝试。即使这样设计， 按钮看上去也是显得混乱，与主部件没有办法分开。 首先是在边界设置出一个空间出来， 并且强制的制定最小宽度，与环绕的弧度， 并且提供一个按钮的字体设置， 似的按钮看上去比较好看。
 
     QPushButton#evilButton {
@@ -76,7 +76,7 @@ categories: QT
          min-width: 10em;
          padding: 6px;
      }
-     
+
 如此这样当我们点击按钮的时候按钮也不会发生什么样的深刻变化。  所以就需要指定一个合适的背景颜色与不一样的边界类型。
 
     QPushButton#evilButton {
@@ -93,14 +93,14 @@ categories: QT
          background-color: rgb(224, 0, 0);
          border-style: inset;
     }
-    
-指定QPushButton 菜单指示器的子控制子控提供了访问子子元素的功能， 例如通常的时候一个按钮将会管理一个菜单， 
+
+指定QPushButton 菜单指示器的子控制子控提供了访问子子元素的功能， 例如通常的时候一个按钮将会管理一个菜单，
 
     QPushButton#evilButton::menu-indicator {
          image: url(myindicator.png);
     }
-    
-同时如果美化一个按钮的话， 那么将可以通过定位符来确定美化按钮的路径， 通常可以是一个图片。 
+
+同时如果美化一个按钮的话， 那么将可以通过定位符来确定美化按钮的路径， 通常可以是一个图片。
 
     QPushButton::menu-indicator {
          image: url(myindicator.png);
@@ -108,32 +108,32 @@ categories: QT
          subcontrol-origin: padding;
          left: -2px;
     }
-    
-经过以上的设置那么QPushButton 将会在方格的中心显示一个myindicator.png 的图片。 
+
+经过以上的设置那么QPushButton 将会在方格的中心显示一个myindicator.png 的图片。
 
 复杂区域的例子：
 当应对于一个用户可编辑可输入的部件的时候， 将需要设计到用户选择区域的颜色设置， 与类型设置， 下面将通过使用QLineEdit 部件来进行演示：
 
     QLineEdit { color: red }
     QLineEdit[readOnly="true"]{color:gray}
-    
+
 在团队开发的时候， 需要设计到不同颜色的设置， 或者说不同类型的设置，那么就需要在样式编辑当中有多种选择，将不需要的那部分，注释掉：
 
     QLineEdit { color: red }
     QLineEdit[readOnly="true"] { color: gray }
     #registrationDialog QLineEdit { color: brown }
-    
+
 自定义制定的部件
 这个部分提供了一些自定义特殊部件的某种样式
-定制QAbstractScrollArea 
+定制QAbstractScrollArea
 比如说一些QAbstractScrollArea 类， 例如 QTextEdit 与QTextBrowser . 同时可以使用后台的属性来进行设置。 例如来设置一个 背景图片。
- 
+
     QTextEdit, QListView {
          background-color: white;
          background-image: url(draft.png);
          background-attachment: scroll;
     }
-    
+
 下面的代码是让背景图片与可浏览的区域大小相同：
 
     QTextEdit, QListView {
@@ -141,7 +141,7 @@ categories: QT
          background-image: url(draft.png);
          background-attachment: fixed;
     }
-    
+
 QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QCheckBox是返回当前的状态：
 
     QCheckBox {
@@ -175,7 +175,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QCheckBox::indicator:indeterminate:pressed {
          image: url(:/images/checkbox_indeterminate_pressed.png);
     }
-    
+
 下面是对QComboBox下拉列表框进行的样式设计：
 
         QComboBox {
@@ -209,7 +209,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
          border-left-width: 1px;
          border-left-color: darkgray;
          border-left-style: solid; /* 仅此一行 */
-         border-top-right-radius: 3px; 
+         border-top-right-radius: 3px;
          border-bottom-right-radius: 3px;
     }
     QComboBox::down-arrow {
@@ -219,7 +219,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
          top: 1px;
          left: 1px;
     }
-    
+
 自定的QSpinBox
 
     QSpinBox {
@@ -271,7 +271,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
      QSpinBox::down-arrow:off { /* off state when value in min */
         image: url(:/images/down_arrow_disabled.png);
     }
-    
+
 自定义的 QFrame
 
     QFrame, QLabel, QToolTip {
@@ -280,7 +280,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
          padding: 2px;
          background-image: url(images/welcome.png);
     }
-    
+
 定制QGroupbox
 
     QGroupBox {
@@ -297,7 +297,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
          background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                                            stop: 0 #FFOECE, stop: 1 #FFFFFF);
     }
-    
+
 对于有一个可选择的QGroupBox ， 使用{#indicator-sub}{::indicator}  他的类型控制就类似于QCheckBox.
 
     QGroupBox::indicator {
@@ -307,7 +307,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QGroupBox::indicator:unchecked {
          image: url(:/images/checkbox_unchecked.png);
     }
-    
+
 定制 QHeaderView
 
     QHeaderView::section {
@@ -325,7 +325,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QHeaderView::up-arrow {
          image: url(up_arrow.png);
     }
-    
+
 定制QLineEdit
 
     QLineEdit {
@@ -335,7 +335,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
          background: white;
          selection-background-color: darkgray;
     }
-    
+
 当一个QLineEdit 需要使用一个密码的模式的话那么将设置成为QLineEdit::Password  这样属性就被使用了。
 
     QLineEdit[echoMode="2"] {
@@ -344,7 +344,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QLineEdit:read-only {
          background: lightblue;
     }
-    
+
 定制QMenu
 
     QMenu {
@@ -358,7 +358,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QMenu::item:selected { /* 当用户使用鼠标活着键盘进行选择的时候选择项的颜色 */
          background-color: #654321;
     }
-    
+
 对于菜单部件的一些其他的选项， 下面提供了许多高级的设置：
 
     QMenu {
@@ -418,7 +418,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QMenu::indicator:exclusive:checked:selected {
          image: url(:/images/radiobutton_checked_hover.png);
     }
-    
+
 定制菜单条
 
     QMenuBar {
@@ -437,7 +437,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QMenuBar::item:pressed {
          background: #888888;
     }
-    
+
 定制进度条
 
     QProgressBar {
@@ -458,7 +458,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
          width: 10px;
          margin: 0.5px;
     }
-    
+
 定制按钮
 
     QPushButton {
@@ -491,8 +491,8 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
              position: relative;
              top: 2px; left: 2px; /* shift the arrow by 2 px */
     }
-    
-定制 QRadioButton 
+
+定制 QRadioButton
 
     QRadioButton::indicator {
              width: 13px;
@@ -516,7 +516,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QRadioButton::indicator:checked:pressed {
              image: url(:/images/radiobutton_checked_pressed.png);
     }
-    
+
 定制ScrollBar
 下面是一个填充的实体的灰色边框的滚动条
 
@@ -544,7 +544,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
              subcontrol-position: left;
              subcontrol-origin: margin;
     }
-    
+
 左箭头与右箭头都分别设置成为灰色的边框与白色的背景，所以，两边都可以设置一个嵌入的图片。
 
     QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
@@ -556,7 +556,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
              background: none;
     }
-    
+
 如果希望两个箭头都在同一个方向， 例如苹果机的界面， 将使用下面的设置模式：
 
     QScrollBar:horizontal {
@@ -593,7 +593,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
              background: none;
     }
-    
+
 定制QSizeGrip
 一般讲通过一个图片进行设置 ：
 
@@ -602,7 +602,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
              width: 16px;
              height: 16px;
     }
-    
+
 定制QSlider
 下面的横向的slider  
 
@@ -635,7 +635,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QSlider::sub-page:vertical {
              background: pink;
     }
-    
+
 定制QSplitter
 
     QSplitter::handle {
@@ -647,7 +647,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QSplitter::handle:vertical {
              width: 2px;
     }
-    
+
 定制状态条 QStatusBar
 将提供一个状态栏的边框与项目的定制：
 
@@ -658,7 +658,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
              border: 1px solid red;
              border-radius: 3px;
     }
-    
+
 定制 QTabWidget 与QTabBar
 
     QTabWidget::pane { /* The tab widget frame */
@@ -718,7 +718,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
              border-color: #9B9B9B;
              border-bottom-color: #C2C7CB; /* same as pane color */
     }
-    
+
     QTabBar::tab:!selected {
              margin-top: 2px; /* make non-selected tabs look smaller */
     }
@@ -766,8 +766,8 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
              border-color: #9B9B9B;
              border-bottom-color: #C2C7CB; /* same as pane color */
     }
-    
-定制QTableWidget 
+
+定制QTableWidget
 下面将设置QTableWidget  的粉色选中区域， 与白色背景。
 
     QTableWidget {
@@ -778,7 +778,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
              background: red;
              border: 2px outset red;
          }
-         
+
 定制工具条
 下面是对工具条的一些选项进行定制
 
@@ -789,7 +789,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QToolBar::handle {
              image: url(handle.png);  //可以设置工具条的背景图片
     }  
-    
+
 定制QToolBox
 将使用到 tab  的子控部分
 
@@ -804,9 +804,9 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
              font: italic;
              color: white;
     }
-    
- 定制QToolButton 
- 
+
+ 定制QToolButton
+
     QToolButton { /* all types of tool button */
              border: 2px solid #8f8f91;
              border-radius: 6px;
@@ -834,8 +834,8 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QToolButton::menu-arrow:open {
              top: 1px; left: 1px; /* shift it a bit */
     }
-    
-定制QTreeView 
+
+定制QTreeView
 
     QTreeView::branch {
                  background: palette(base);
@@ -861,7 +861,7 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
     QTreeView::branch:open:has-children:!has-siblings {
                  background: green;
     }
-    
+
 下面是几个样式， 当选择颜色的时候可使用十六进制的数据来表达：
 
     QRadioButton{
@@ -869,4 +869,3 @@ QCheckBox 与QRadioButton 具有想色的属性， 他们之间的不同时QChec
           color:#CBF57D;
           font:bold;
     }
-    

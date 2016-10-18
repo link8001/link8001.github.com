@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: QT
+categories: QT编程
 ---
 
 转自[iteye](http://qimo601.iteye.com/blog/1283372)

@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: linux
+categories: 单片机相关
 ---
 
 转自[wolinlabs](http://www.wolinlabs.com/blog/linux.stm32.discovery.gcc.html)

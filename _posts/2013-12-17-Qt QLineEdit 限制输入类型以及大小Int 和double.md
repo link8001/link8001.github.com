@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: QT
+categories: QT编程
 ---
 
 转自[CSDN](http://blog.csdn.net/a_sungirl/article/details/17373405)
@@ -25,7 +25,7 @@ categories: QT
     m_LineEditParA->setValidator(new QRegExpValidator(double_rx10000, m_LineEditParA));  
     m_LineEditParB = new QLineEdit;  
     m_LineEditParB->setValidator(new QRegExpValidator(double_rx10, m_LineEditParB));  
-3.QLineEdit只输入字母和数字 
+3.QLineEdit只输入字母和数字
 
     QRegExp regx("[a-zA-Z0-9]+$");  
     QValidator *validator = new QRegExpValidator(regx, lined );  

@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: QT
+categories: QT编程
 ---
 
 转自[博客园](http://www.cnblogs.com/xiaomanon/p/3792789.html?utm_source=tuicool&utm_medium=referral)
